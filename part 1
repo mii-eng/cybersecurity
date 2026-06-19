@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TSA Cybersecurity Trainer V3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🛡 TSA Cybersecurity Trainer V3</h1>
+  <p>Nationals Adaptive Simulator (500Q Engine)</p>
+</header>
+
+<nav>
+  <button onclick="show('learn')">Learn</button>
+  <button onclick="show('flash')">Flashcards</button>
+  <button onclick="show('field')">Field Guide</button>
+  <button onclick="show('practice')">Practice</button>
+  <button onclick="show('exam')">Mock Exam</button>
+  <button onclick="show('stats')">Analytics</button>
+</nav>
+
+<main>
+
+<section id="learn" class="page active">
+  <h2>Adaptive Learning Path</h2>
+  <div id="units"></div>
+</section>
+
+<section id="flash" class="page">
+  <h2>Spaced Repetition Flashcards</h2>
+  <div class="card" id="flashcard"></div>
+  <button onclick="flashNext()">Next</button>
+</section>
+
+<section id="field" class="page">
+  <h2>Field Guide (Searchable)</h2>
+  <input oninput="renderField(this.value)">
+  <div id="fieldList"></div>
+</section>
+
+<section id="practice" class="page">
+  <h2>Practice Mode (Adaptive)</h2>
+  <div id="practiceBox"></div>
+</section>
+
+<section id="exam" class="page">
+  <h2>Nationals Mock Exam</h2>
+  <button onclick="startExam()">Start Exam</button>
+  <h3 id="timer"></h3>
+  <div id="examBox"></div>
+</section>
+
+<section id="stats" class="page">
+  <h2>Analytics Dashboard</h2>
+  <div id="statsBox"></div>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
